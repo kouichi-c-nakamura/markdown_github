@@ -3,11 +3,13 @@
 mathjax trials
 
 
-# Positive control
+# Success
 
 When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
 
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+
+----
 
 `\eqalign{..}` can work with `\\`
 
@@ -18,6 +20,8 @@ $$
 }
 $$
 
+
+----
 
 `\\` is recognized in `\eqalign{..}`
 
@@ -30,6 +34,20 @@ $$
 
 # Broken
 
+a space between $ and the content 
+
+When $ a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0) $ and they are
+
+----
+
+no space between $ and the surrounding
+
+When$a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0) $and they are
+
+
+----
+
+
 `\\` is not recognized 
 
 $$
@@ -38,6 +56,7 @@ $$
 1 + \tan ^2 \theta = \frac {1} {\cos^2 \theta}
 $$
 
+----
 
 `\\` is not recognized in `\color {gray} {....}`
 
@@ -47,12 +66,16 @@ $$
 1 + \tan ^2 \theta = \frac{1}{\cos^2 \theta}
 $$
 
+----
+
 No blank line  before `$$`
 $$
 \color{gray}{\sin \theta = \tan \theta \cdot \cos \theta より} \\
 \color{gray}{\tan^2 \theta \cdot \cos^2 \theta + \cos ^2\theta = 1} \\
 1 + \tan ^2 \theta = \frac{1}{\cos^2 \theta}
 $$
+
+----
 
 Blank line between `$$` and the content
 
