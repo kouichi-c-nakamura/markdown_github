@@ -1,14 +1,16 @@
 # Mathjax behaviour on GitHub
 
+GitHub supports rendering Mathjax. However, its implelementation appears to be very strict and often fails when other renderers are fine.
+
+Here are some examples of successful and unsuccessful usage of Mathjax in GitHub markdown.
+
 # Success
 
 When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
 
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
-----
-
-`\eqalign{..}` can work with `\\`
+## `\eqalign{..}` can work with `\\`
 
 $$
 \eqalign{\sin(90˚ - \theta) &= \cos\theta \\
@@ -17,10 +19,7 @@ $$
 }
 $$
 
-
-----
-
-`\\` is recognized in `\eqalign{..}`
+Another example
 
 $$
 \eqalign{
@@ -31,21 +30,27 @@ $$
 
 # Broken
 
-a space between $ and the content 
+## a space between $ and the content 
 
 When $ a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0) $ and they are
 
-----
-
-no space between $ and the surrounding
+## no space between $ and the surrounding
 
 When$a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0) $and they are
 
 
-----
+## `\\` is not recognized for virtually no reason
 
+$$
+f=\\
+1 \\
+$$
 
-`\\` is not recognized 
+$$
+\sin \theta =\\
+1 \\
+$$
+
 
 $$
 \sin \theta = \tan \theta \cdot \cos \theta \\
@@ -53,9 +58,7 @@ $$
 1 + \tan ^2 \theta = \frac {1} {\cos^2 \theta}
 $$
 
-----
-
-`\\` is not recognized in `\color {gray} {....}`
+## `\\` is not recognized in `\color {gray} {....}`
 
 $$
 \color{gray}{\sin \theta = \tan \theta \cdot \cos \theta より} \\
@@ -63,18 +66,16 @@ $$
 1 + \tan ^2 \theta = \frac{1}{\cos^2 \theta}
 $$
 
-----
+## No blank line above `$$`
 
-No blank line  before `$$`
+abcde
 $$
 \color{gray}{\sin \theta = \tan \theta \cdot \cos \theta より} \\
 \color{gray}{\tan^2 \theta \cdot \cos^2 \theta + \cos ^2\theta = 1} \\
 1 + \tan ^2 \theta = \frac{1}{\cos^2 \theta}
 $$
 
-----
-
-Blank line between `$$` and the content
+## Existence of a blank line between `$$` and the content
 
 $$
 
