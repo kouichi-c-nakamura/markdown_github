@@ -1,7 +1,4 @@
-# markdown_github
-
-mathjax trials
-
+# Mathjax behaviour on GitHub
 
 # Success
 
